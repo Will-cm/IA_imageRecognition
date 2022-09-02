@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <!--<div>{{data}}</div>-->
+    <form action="{{ url_for('send_image') }}" method="POST" enctype = "multipart/form-data" >
+        <input class="submit" type="file" name="file">
+        <button class="submit" type="submit">Subir archivo</button>
+    </form>   
+    <br>
+    <a style="background-color:rgb(176, 209, 27);" href="{{ url_for('get_data') }}">PROCESAR IMAGEN</a>
+    <a style="background-color:rgb(233, 134, 117);" href="{{ url_for('delete') }}">LIMPIAR</a>
+    <br><br>
+    <div>
+        <img src="{{url_for('get_image')}}" width="700" height="500"> <br>
+        {% for datas in data %}
+        <span>{{datas['name'] }}</span>
+        
+        <br>
+        <!--<p>{{ datas['image']}}</p> -->
+        <img src="data:image/jpeg;base64,{{ datas['image'] }}" alt="" width="300" height="200">
+        <br>
+        {% endfor %}
+    </div>
+{% endblock content %}

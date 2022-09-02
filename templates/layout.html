@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Resultado</title>
+    <style>
+        .container{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: #71dce4;
+            color: black;
+            text-align: center;
+        }
+        .submit{
+            background-color: #04AA6D;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: teal;
+            color: #fff;
+        }
+        .nav-links a {
+            color: #fff;
+        }
+        /* LOGO */
+        .logo {
+            font-size: 32px;
+        }
+        /* NAVBAR MENU */
+        .menu {
+            display: flex;
+            gap: 1em;
+            font-size: 18px;
+        }
+        .menu li:hover {
+            background-color: #4c9e9e;
+            border-radius: 5px;
+            transition: 0.3s ease;
+        }
+        .menu li {
+            padding: 5px 14px;
+        }
+        /* CHECKBOX HACK */
+        input[type=checkbox]{
+        display: none;
+        } 
+        /*HAMBURGER MENU*/
+        .hamburger {
+        display: none;
+        font-size: 24px;
+        user-select: none;
+        }
+     </style>
+     
+</head>
+<body class="container">
+    <nav class="navbar">
+    <!-- LOGO -->
+    <div class="logo">VISION</div>
+    <!-- NAVIGATION MENU -->
+    <ul class="nav-links">
+        <!-- USING CHECKBOX HACK -->
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+        <!-- NAVIGATION MENUS -->
+        <div class="menu">
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/">Acerca de nosotros</a></li>
+        
+        <li><a href="/">Precios</a></li>
+        <li><a href="/">Contáctanos</a></li>
+        </div>
+    </ul>
+    </nav>
+    
+    <h1>IDENTIFICAR - IMÁGENES</h1>
+    {% block content %}
+
+    {% endblock content %}     
+</body>
+</html>

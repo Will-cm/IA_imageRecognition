@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "image": "product-images/bike-1.jpeg",
+        "name": "Orient Vita Pro 28\"",
+        "price": "284.00",
+        "inventory": 4,
+        "productCode": "K203"
+     },
+     {
+        "id": 2,
+        "image": "product2-images/bike-1.jpeg",
+        "name": "Orient2 Vita Pro 28\"",
+        "price": "284.00",
+        "inventory": 4,
+        "productCode": "K203"
+     }
+]
